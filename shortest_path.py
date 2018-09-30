@@ -41,6 +41,8 @@ ted_link = ted_database[0]["ted-link"]
 links = []
 cost = []
 capacity = []
+local_addresses = []
+next_hop_addresses = []
 
 
 # Loop through every element of the json list with keyname: "ted-database" 
@@ -50,6 +52,8 @@ for n in range(0,len(ted_database)):
     list = []
     cost_list = []
     capacity_list = []
+    local_address = []
+    next_hop_address = []
     
     # Loop through every links to other routers from the given router n
     for i in range(0,len(ted_database[n]["ted-link"])):
@@ -63,10 +67,20 @@ for n in range(0,len(ted_database)):
         # Insert the router links' capacities of the first router
         capacity_list.append(ted_database[n]["ted-link"][i]["ted-link-static-bandwidth"][0]["data"].encode("ascii"))
    
-    # Insert the 1D lists of routers' links, costs and capacities into the 2D arrays.
+        # Insert the router interfaces' local IP addresses
+        local_address.append(ted_database[n]["ted-link"][i]["ted-link-local-address"][0]["data"].encode("ascii"))
+         
+        # Insert the router intefaces' remote/next hop IP addresses
+        next_hop_address.append(ted_database[n]["ted-link"][i]["ted-link-remote-address"][0]["data"].encode("ascii"))
+   
+    # Insert the 1D lists of routers' links, costs, capacities, interfaces' local and remote IP addresses into the 2D arrays.
     links.append(list)
     cost.append(cost_list)
     capacity.append(capacity_list)
+    local_addresses.append(local_address)
+    next_hop_addresses.append(next_hop_address)
+    
+    
     
     
     
@@ -94,5 +108,13 @@ print " "
 
 print "SID Indexes:  "
 print sid_indexes
+print " "
+
+print "Local IP Addresses of the Interfaces: "
+print local_addresses
+print " "
+
+print "Remote IP Addresses of the Interfaces:  "
+print next_hop_addresses
 print " "
 
