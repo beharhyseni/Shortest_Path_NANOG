@@ -19,7 +19,7 @@ dict_length = len(ted_database)
 
 # Contains the names of the Node IDs
 id_list = []
-prefix_algs = []
+sid_indexes = []
 ted_block_starts = []
 
 
@@ -29,9 +29,9 @@ for i in range(0, dict_length):
     
 for k in range(0, dict_length):
    block_start = ted_database[k]["ted-spring-capability"][0]["ted-spring-srgb-block"][0]["ted-spring-srgb-block-start"][0]["data"].encode("ascii")
-   prefix_alg  = ted_database[k]["ted-prefixes"][0]["ted-prefix"][0]["ted-prefix-sid"][0]["ted-prefix-sid-algo"][0]["data"].encode("ascii")
+   sid_index  = ted_database[k]["ted-prefixes"][0]["ted-prefix"][0]["ted-prefix-sid"][0]["ted-prefix-sid-index"][0]["data"].encode("ascii")
    ted_block_starts.append(block_start)
-   prefix_algs.append(prefix_alg)
+   sid_indexes.append(sid_index)
    
 
 #print ted_database[0]["ted-spring-capability"][0]["ted-spring-srgb-block"][0]["ted-spring-srgb-block-start"][0]["data"].encode("ascii")
@@ -80,7 +80,7 @@ print "Block starts : "
 print ted_block_starts
 print " "
 
-print "prefix algorithms:  "
-print prefix_algs
+print "sid indexes:  "
+print sid_indexes
 print " "
 
