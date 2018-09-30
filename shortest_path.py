@@ -34,24 +34,36 @@ for k in range(0, dict_length):
    sid_indexes.append(sid_index)
    
 
-#print ted_database[0]["ted-spring-capability"][0]["ted-spring-srgb-block"][0]["ted-spring-srgb-block-start"][0]["data"].encode("ascii")
-
+# Extracts the "ted-link" key from the given topology json
 ted_link = ted_database[0]["ted-link"]
+
+# Initializes the arrays to be used (they will be 2D arrays after inserting 1D arrays into them)
 links = []
 cost = []
 capacity = []
 
 
+# Loop through every element of the json list with keyname: "ted-database" 
 for n in range(0,len(ted_database)):
-   
+    
+    # reset the lists to be used for next nodes' elements
     list = []
     cost_list = []
     capacity_list = []
+    
+    # Loop through every links to other routers from the given router n
     for i in range(0,len(ted_database[n]["ted-link"])):
+        
+        # Insert the router links of the first router
         list.append(ted_database[n]["ted-link"][i]["ted-link-to"][0]["data"].encode("ascii"))
+        
+        # Insert the router links' costs of the first router
         cost_list.append(ted_database[n]["ted-link"][i]["ted-link-metric"][0]["data"].encode("ascii"))
+        
+        # Insert the router links' capacities of the first router
         capacity_list.append(ted_database[n]["ted-link"][i]["ted-link-static-bandwidth"][0]["data"].encode("ascii"))
    
+    # Insert the 1D lists of routers' links, costs and capacities into the 2D arrays.
     links.append(list)
     cost.append(cost_list)
     capacity.append(capacity_list)
@@ -59,7 +71,7 @@ for n in range(0,len(ted_database)):
     
     
     
-    
+print " "  
 print "Nodes: "
 print id_list
 print " "
@@ -80,7 +92,7 @@ print "Block starts : "
 print ted_block_starts
 print " "
 
-print "sid indexes:  "
+print "SID Indexes:  "
 print sid_indexes
 print " "
 
