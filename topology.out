@@ -1,0 +1,282 @@
+TED database: 5 ISIS nodes 5 INET nodes
+NodeID: mx1.00(10.0.0.1)
+  Type: Rtr, Age: 139 secs, LinkIn: 3, LinkOut: 3
+  Protocol: IS-IS(2)
+   10.0.0.1
+    To: mx4.00(10.0.0.4), Local: 10.0.1.4, Remote: 10.0.1.5
+      Local interface index: 335, Remote interface index: 335
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 300Mbps
+      Reservable BW: 300Mbps
+      Available BW [priority] bps:
+          [0] 300Mbps      [1] 300Mbps     [2] 300Mbps     [3] 300Mbps     
+          [4] 300Mbps      [5] 300Mbps     [6] 300Mbps     [7] 300Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 300Mbps      [1] 300Mbps     [2] 300Mbps     [3] 300Mbps     
+          [4] 300Mbps      [5] 300Mbps     [6] 300Mbps     [7] 300Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299776, Flags: 0x30, Weight: 0
+    To: mx3.00(10.0.0.3), Local: 10.0.1.0, Remote: 10.0.1.1
+      Local interface index: 332, Remote interface index: 332
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 100Mbps
+      Reservable BW: 100Mbps
+      Available BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299792, Flags: 0x30, Weight: 0
+    To: mx2.00(10.0.0.2), Local: 10.0.1.2, Remote: 10.0.1.3
+      Local interface index: 334, Remote interface index: 334
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 200Mbps
+      Reservable BW: 200Mbps
+      Available BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299808, Flags: 0x30, Weight: 0
+   Prefixes: 
+     10.0.0.1/32
+      Metric: 0, Flags: 0x00
+      Prefix-SID:
+        SID: 1, Flags: 0x40, Algo: 0
+   SPRING-Capabilities:
+     SRGB block [Start: 800000, Range: 4096, Flags: 0xc0]
+   SPRING-Algorithms:
+     Algo: 0
+NodeID: mx2.00(10.0.0.2)
+  Type: Rtr, Age: 683 secs, LinkIn: 3, LinkOut: 3
+  Protocol: IS-IS(2)
+   10.0.0.2
+    To: mx1.00(10.0.0.1), Local: 10.0.1.3, Remote: 10.0.1.2
+      Local interface index: 334, Remote interface index: 334
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 200Mbps
+      Reservable BW: 200Mbps
+      Available BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299792, Flags: 0x30, Weight: 0
+    To: mx5.00(10.0.0.5), Local: 10.0.1.8, Remote: 10.0.1.9
+      Local interface index: 335, Remote interface index: 336
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 100Mbps
+      Reservable BW: 100Mbps
+      Available BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299808, Flags: 0x30, Weight: 0
+    To: mx3.00(10.0.0.3), Local: 10.0.1.7, Remote: 10.0.1.6
+      Local interface index: 333, Remote interface index: 333
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 200Mbps
+      Reservable BW: 200Mbps
+      Available BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299776, Flags: 0x30, Weight: 0
+   Prefixes: 
+     10.0.0.2/32
+      Metric: 0, Flags: 0x00
+      Prefix-SID:
+        SID: 2, Flags: 0x40, Algo: 0
+   SPRING-Capabilities:
+     SRGB block [Start: 800000, Range: 4096, Flags: 0xc0]
+   SPRING-Algorithms:
+     Algo: 0
+NodeID: mx3.00(10.0.0.3)
+  Type: Rtr, Age: 158 secs, LinkIn: 2, LinkOut: 2
+  Protocol: IS-IS(2)
+   10.0.0.3
+    To: mx1.00(10.0.0.1), Local: 10.0.1.1, Remote: 10.0.1.0
+      Local interface index: 332, Remote interface index: 332
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 100Mbps
+      Reservable BW: 100Mbps
+      Available BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299792, Flags: 0x30, Weight: 0
+    To: mx2.00(10.0.0.2), Local: 10.0.1.6, Remote: 10.0.1.7
+      Local interface index: 333, Remote interface index: 333
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 200Mbps
+      Reservable BW: 200Mbps
+      Available BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 200Mbps      [1] 200Mbps     [2] 200Mbps     [3] 200Mbps     
+          [4] 200Mbps      [5] 200Mbps     [6] 200Mbps     [7] 200Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299776, Flags: 0x30, Weight: 0
+   Prefixes: 
+     10.0.0.3/32
+      Metric: 0, Flags: 0x00
+      Prefix-SID:
+        SID: 3, Flags: 0x40, Algo: 0
+   SPRING-Capabilities:
+     SRGB block [Start: 800000, Range: 4096, Flags: 0xc0]
+   SPRING-Algorithms:
+     Algo: 0
+NodeID: mx4.00(10.0.0.4)
+  Type: Rtr, Age: 543 secs, LinkIn: 2, LinkOut: 2
+  Protocol: IS-IS(2)
+   10.0.0.4, 10.1.1.4
+    To: mx1.00(10.0.0.1), Local: 10.0.1.5, Remote: 10.0.1.4
+      Local interface index: 335, Remote interface index: 335
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 300Mbps
+      Reservable BW: 300Mbps
+      Available BW [priority] bps:
+          [0] 300Mbps      [1] 300Mbps     [2] 300Mbps     [3] 300Mbps     
+          [4] 300Mbps      [5] 300Mbps     [6] 300Mbps     [7] 300Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 300Mbps      [1] 300Mbps     [2] 300Mbps     [3] 300Mbps     
+          [4] 300Mbps      [5] 300Mbps     [6] 300Mbps     [7] 300Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299776, Flags: 0x30, Weight: 0
+    To: mx5.00(10.0.0.5), Local: 10.0.1.10, Remote: 10.0.1.11
+      Local interface index: 334, Remote interface index: 335
+      Color: 0 <none>
+      Metric: 20
+      IGP metric: 20
+      Static BW: 50Mbps
+      Reservable BW: 50Mbps
+      Available BW [priority] bps:
+          [0] 50Mbps       [1] 50Mbps      [2] 50Mbps      [3] 50Mbps      
+          [4] 50Mbps       [5] 50Mbps      [6] 50Mbps      [7] 50Mbps      
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 50Mbps       [1] 50Mbps      [2] 50Mbps      [3] 50Mbps      
+          [4] 50Mbps       [5] 50Mbps      [6] 50Mbps      [7] 50Mbps      
+      P2P Adjacency-SID:
+        IPV4, SID: 299792, Flags: 0x30, Weight: 0
+   Prefixes: 
+     10.0.0.4/32
+      Metric: 0, Flags: 0x00
+      Prefix-SID:
+        SID: 4, Flags: 0x40, Algo: 0
+   SPRING-Capabilities:
+     SRGB block [Start: 800000, Range: 4096, Flags: 0xc0]
+   SPRING-Algorithms:
+     Algo: 0
+NodeID: mx5.00(10.0.0.5)
+  Type: Rtr, Age: 593 secs, LinkIn: 2, LinkOut: 2
+  Protocol: IS-IS(2)
+   10.0.0.5
+    To: mx4.00(10.0.0.4), Local: 10.0.1.11, Remote: 10.0.1.10
+      Local interface index: 335, Remote interface index: 334
+      Color: 0 <none>
+      Metric: 20
+      IGP metric: 20
+      Static BW: 50Mbps
+      Reservable BW: 50Mbps
+      Available BW [priority] bps:
+          [0] 50Mbps       [1] 50Mbps      [2] 50Mbps      [3] 50Mbps      
+          [4] 50Mbps       [5] 50Mbps      [6] 50Mbps      [7] 50Mbps      
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 50Mbps       [1] 50Mbps      [2] 50Mbps      [3] 50Mbps      
+          [4] 50Mbps       [5] 50Mbps      [6] 50Mbps      [7] 50Mbps      
+      P2P Adjacency-SID:
+        IPV4, SID: 299792, Flags: 0x30, Weight: 0
+    To: mx2.00(10.0.0.2), Local: 10.0.1.9, Remote: 10.0.1.8
+      Local interface index: 336, Remote interface index: 335
+      Color: 0 <none>
+      Metric: 10
+      IGP metric: 10
+      Static BW: 100Mbps
+      Reservable BW: 100Mbps
+      Available BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      Interface Switching Capability Descriptor(1):
+        Switching type: Packet
+        Encoding type: Packet
+        Maximum LSP BW [priority] bps:
+          [0] 100Mbps      [1] 100Mbps     [2] 100Mbps     [3] 100Mbps     
+          [4] 100Mbps      [5] 100Mbps     [6] 100Mbps     [7] 100Mbps     
+      P2P Adjacency-SID:
+        IPV4, SID: 299808, Flags: 0x30, Weight: 0
+   Prefixes: 
+     10.0.0.5/32
+      Metric: 0, Flags: 0x00
+      Prefix-SID:
+        SID: 5, Flags: 0x40, Algo: 0
+   SPRING-Capabilities:
+     SRGB block [Start: 800000, Range: 4096, Flags: 0xc0]
+   SPRING-Algorithms:
+     Algo: 0
