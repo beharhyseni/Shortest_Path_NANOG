@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh mx1.pod2.nanog74.cloud.tesuto.com "show ted database extensive | display json" > topology.conf

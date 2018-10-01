@@ -1,5 +1,18 @@
 import networkx as nx
 
+def shortPath(): 
+
+    G = nx.Graph()
+    for i in range(1,6):
+        G.add_node("vmx{}".format(i))
+
+    G.add_edge("vmx1","vmx3", cost=10, capacity=100)
+    G.add_edge("vmx1","vmx2", cost=10, capacity=200)
+    G.add_edge("vmx1","vmx4", cost=10, capacity=300)
+    G.add_edge("vmx2","vmx3", cost=10, capacity=200)
+    G.add_edge("vmx2","vmx5", cost=10, capacity=100)
+    G.add_edge("vmx4","vmx5", cost=20, capacity=50)
+    return shortestPath(G,"vmx3","vmx4",200)
 def main():
     G = nx.Graph()
     for i in range(1,6):
@@ -118,4 +131,4 @@ def getNextShortestPath(G, source, target, payload=0, cost="cost"):
             H.remove_edge(u,v)
     yield nx.shortest_path(H, source, target, cost)
 
-main()
+#main()

@@ -1,9 +1,11 @@
 import networkx as nx
 from ncclient import manager
 import json as json
+from graphs import *
+import sys
 
 # Do not forget to change to your path 
-FILE = 'C:/Users/behar/Desktop/Shortest_Path_NANOG/topology.json'
+FILE = 'topology.json'
 
 # Open the JSON file that contains the router information:
 with open(FILE) as topology:    data = json.load(topology)
@@ -92,16 +94,15 @@ G = nx.Graph()
 for i,j in enumerate(id_list):
     G.add_node(j)
     for k,l in enumerate(links[i]):
-        the_cost = cost[i][k]
-        the_capacity = capacity[i][k]
+        the_cost = int(cost[i][k])
+        the_capacity = int(capacity[i][k][:-4])
         G.add_edge(j, links[i][k], cost=the_cost, capacity=the_capacity)
     
-
     
 
 # print " "  
 # print "Nodes: "
-# print id_list
+print id_list
 # print " "
 # 
 # print "links: "
@@ -132,9 +133,36 @@ for i,j in enumerate(id_list):
 # print next_hop_addresses
 # print " "
 # 
-
 print "The edges with the right costs and capacities: "
 for u,v,atr in G.edges(data=True):
     print u, v, atr
 print " "
-
+print sys.argv
+#values =  shortestPath(G, sys.argv[1], sys.argv[2], sys.argv[3])
+values =  shortestPath(G, "mx3.00(10.0.0.3)", "mx4.00(10.0.0.4)", 200)
+#val = multiCommodity(G,"mx3.00(10.0.0.3)", "mx4.00(10.0.0.4)", "mx5.00(10.0.0.5)", "mx4.00(10.0.0.4)", 200, 60)
+#values = val[0]
+#values = val[1]
+label = []                                                                                                
+for sid in sid_indexes:                                                                                   
+    label.append("800000"+sid)
+        
+id_list_short = []                                                                                        
+#for id in id_list:
+#    id_list_short.append(id[:4])                                                                          
+dictionary = dict(zip(id_list, label))                                                             
+odict = dict(zip(id_list, next_hop_addresses))                                                         
+    
+    
+packet_labels = []
+next_hop = []                                                                                             
+for value in values:                                                                                      
+    packet_labels.append(dictionary[value])                                                               
+    next_hop.append(odict[value])                                                                         
+string = ""                                                                                               
+for x in range(2, len(packet_labels)):                                                                   
+    string += packet_labels[x] + " "                                                                       
+print next_hop                                                                                                         
+line = "neighbor " + "100.96.0.8 " + " announce route " + values[-1][7:15] + " next-hop " + next_hop[0][1] + " label [ " + string + "]\n"
+with open("routes.log","a") as myfile:                                                                    
+    myfile.write(line)
