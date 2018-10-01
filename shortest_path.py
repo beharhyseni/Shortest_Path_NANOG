@@ -85,36 +85,56 @@ for n in range(0,len(ted_database)):
     
     
     
-print " "  
-print "Nodes: "
-print id_list
-print " "
+    
+    
 
-print "links: "
-print links
-print " "
+G = nx.Graph()
+for i,j in enumerate(id_list):
+    G.add_node(j)
+    for k,l in enumerate(links[i]):
+        the_cost = cost[i][k]
+        the_capacity = capacity[i][k]
+        G.add_edge(j, links[i][k], cost=the_cost, capacity=the_capacity)
+    
 
-print "links costs: "
-print cost
-print " "
+    
 
-print "links capacities: "
-print capacity
-print " "
+# print " "  
+# print "Nodes: "
+# print id_list
+# print " "
+# 
+# print "links: "
+# print links
+# print " "
+# 
+# print "links costs: "
+# print cost
+# print " "
+# 
+# print "links capacities: "
+# print capacity
+# print " "
+# 
+# print "Block starts : "
+# print ted_block_starts
+# print " "
+# 
+# print "SID Indexes:  "
+# print sid_indexes
+# print " "
+# 
+# print "Local IP Addresses of the Interfaces: "
+# print local_addresses
+# print " "
+# 
+# print "Remote IP Addresses of the Interfaces:  "
+# print next_hop_addresses
+# print " "
+# 
 
-print "Block starts : "
-print ted_block_starts
-print " "
-
-print "SID Indexes:  "
-print sid_indexes
-print " "
-
-print "Local IP Addresses of the Interfaces: "
-print local_addresses
-print " "
-
-print "Remote IP Addresses of the Interfaces:  "
-print next_hop_addresses
+print "The edges with the right costs and capacities: "
+for u,v,atr in G.edges(data=True):
+    print u, v, atr
 print " "
 
